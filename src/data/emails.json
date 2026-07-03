@@ -1,0 +1,602 @@
+[
+  {
+    "id": "b-001",
+    "from": {
+      "name": "Service Sécurité BNP",
+      "email": "securite@bnp-parlbas-verification.com"
+    },
+    "subject": "URGENT : Votre compte sera bloqué dans 24h",
+    "date": "2026-05-20T08:14:00Z",
+    "body": "Cher Client,\n\nNous avons détécté une activité suspecte sur votre compte bancaire. Pour éviter le blocage immédiat de votre carte, vous devez confirmer votre identité dans les 24 heures.\n\nCliquez ici pour vérifier votre compte : http://bnp-parlbas-verification.com/login\n\nA défaut de réponse, votre compte sera suspendu définitivement.\n\nCordialement,\nLe Service Sécurité",
+    "isPhishing": true,
+    "difficulty": "beginner",
+    "indicators": [
+      "Nom de domaine suspect (bnp-parlbas-verification.com au lieu de bnpparibas.fr)",
+      "Sentiment d'urgence artificiel (24h, blocage immédiat)",
+      "Formule générique « Cher Client » sans nom",
+      "Faute d'orthographe : « détécté »",
+      "Lien en HTTP non sécurisé vers un domaine inconnu"
+    ],
+    "explanation": "Une vraie banque ne vous demandera jamais de confirmer vos identifiants via un lien dans un email. Le domaine est un typosquat (parlbas au lieu de paribas) et les techniques de pression psychologique sont des marqueurs classiques de phishing."
+  },
+  {
+    "id": "l-001",
+    "from": {
+      "name": "Amazon.fr",
+      "email": "auto-confirm@amazon.fr"
+    },
+    "subject": "Votre commande Amazon a été expédiée (n° 402-7891234-5678901)",
+    "date": "2026-05-19T16:42:00Z",
+    "body": "Bonjour Lorenzo,\n\nBonne nouvelle ! Votre commande a été expédiée et arrivera entre le 21 et le 22 mai.\n\nDétails de la commande :\n- Casque audio Sony WH-1000XM5 - 349,00 €\n- Livraison : Mondial Relay, point retrait Tabac de la Gare\n\nVous pouvez suivre votre colis depuis votre espace client sur amazon.fr (rubrique « Vos commandes »).\n\nMerci de votre confiance,\nL'équipe Amazon",
+    "isPhishing": false,
+    "difficulty": "beginner",
+    "indicators": [
+      "Domaine officiel amazon.fr",
+      "Personnalisation avec le prénom du destinataire",
+      "Numéro de commande au format Amazon habituel",
+      "Aucun lien à cliquer en urgence : invitation à passer par l'espace client",
+      "Pas de demande d'identifiants ni de paiement"
+    ],
+    "explanation": "Email transactionnel légitime. Amazon ne demande jamais vos mots de passe par email et vous redirige toujours vers votre espace client pour suivre une commande, sans inclure de lien d'authentification direct."
+  },
+  {
+    "id": "b-002",
+    "from": {
+      "name": "La Poste - Suivi colis",
+      "email": "livraison@laposte-colis-suivi.net"
+    },
+    "subject": "Votre colis est en attente - Réglez 2,99€ de frais de douane",
+    "date": "2026-05-21T07:03:00Z",
+    "body": "Bonjour,\n\nVotre colis n°FR3389245 est actuellement bloqué dans notre centre de tri en raison de frais de douane non payés d'un montant de 2,99€.\n\nPour débloquer la livraison, merci de regler les frais sous 48h via ce lien :\nhttp://laposte-colis-suivi.net/paiement?id=FR3389245\n\nPassé ce délai, le colis sera retourné à l'expéditeur.\n\nCordialement,\nService Livraison La Poste",
+    "isPhishing": true,
+    "difficulty": "beginner",
+    "indicators": [
+      "Domaine frauduleux laposte-colis-suivi.net (vrai domaine : laposte.fr)",
+      "Demande de paiement par lien externe",
+      "Petite somme rassurante (2,99€) pour baisser la vigilance",
+      "Délai court (48h) créant une pression",
+      "Faute : « regler » sans accent"
+    ],
+    "explanation": "Arnaque classique aux frais de douane. La Poste ne réclame jamais de paiement par email avec un lien direct. Cette technique vise à capturer vos données bancaires sur une fausse page de paiement."
+  },
+  {
+    "id": "l-002",
+    "from": {
+      "name": "Spotify",
+      "email": "no-reply@spotify.com"
+    },
+    "subject": "Votre récap de la semaine est arrivé",
+    "date": "2026-05-18T09:00:00Z",
+    "body": "Salut Lorenzo,\n\nVoici les titres que tu as le plus écoutés cette semaine :\n\n1. Daft Punk - Around the World\n2. Tame Impala - The Less I Know The Better\n3. Phoenix - 1901\n\nÉcouter ma playlist hebdomadaire dans l'application Spotify.\n\nBonne écoute,\nL'équipe Spotify",
+    "isPhishing": false,
+    "difficulty": "beginner",
+    "indicators": [
+      "Domaine officiel spotify.com",
+      "Contenu cohérent avec le service utilisé",
+      "Ton décontracté habituel de la marque",
+      "Aucune demande d'action sensible (paiement, identifiants)",
+      "Invite à ouvrir l'application, pas un lien externe"
+    ],
+    "explanation": "Newsletter automatique standard d'un service connu. Aucun marqueur de phishing : ni urgence, ni demande d'information, ni lien suspect."
+  },
+  {
+    "id": "b-003",
+    "from": {
+      "name": "Direction Générale des Finances Publiques",
+      "email": "remboursement@impots-gouv-france.com"
+    },
+    "subject": "Vous bénéficiez d'un remboursement de 247,53€",
+    "date": "2026-05-17T11:25:00Z",
+    "body": "Madame, Monsieur,\n\nSuite au traitement de votre dernière déclaration de revenus, nos services ont déterminé que vous bénéficiez d'un remboursement d'impôt d'un montant de 247,53 €.\n\nPour percevoir ce remboursement, veuillez compléter le formulaire en ligne avec vos coordonnées bancaires :\n\nhttps://impots-gouv-france.com/remboursement/formulaire\n\nLe versement sera effectué sous 5 jours ouvrés.\n\nDirection Générale des Finances Publiques",
+    "isPhishing": true,
+    "difficulty": "beginner",
+    "indicators": [
+      "Faux domaine impots-gouv-france.com (vrai : impots.gouv.fr)",
+      "Demande de coordonnées bancaires par formulaire externe",
+      "Promesse d'argent pour inciter à cliquer (appât du gain)",
+      "Formule générique « Madame, Monsieur »",
+      "Le vrai site .gouv.fr utilise FranceConnect, jamais un formulaire libre"
+    ],
+    "explanation": "L'administration fiscale française ne demande JAMAIS vos coordonnées bancaires par email. Les remboursements arrivent automatiquement sur le compte déjà déclaré. Tout site qui n'est pas en .gouv.fr se faisant passer pour les impôts est une arnaque."
+  },
+  {
+    "id": "l-003",
+    "from": {
+      "name": "Doctolib",
+      "email": "rendez-vous@doctolib.fr"
+    },
+    "subject": "Rappel : votre rendez-vous demain à 14h30",
+    "date": "2026-05-21T18:00:00Z",
+    "body": "Bonjour Lorenzo,\n\nCeci est un rappel pour votre rendez-vous :\n\nDr Caroline Martin - Médecin généraliste\nVendredi 22 mai 2026 à 14h30\n12 rue de la République, 75011 Paris\n\nSi vous ne pouvez pas vous rendre à ce rendez-vous, merci de l'annuler depuis votre compte Doctolib pour libérer le créneau.\n\nÀ bientôt,\nL'équipe Doctolib",
+    "isPhishing": false,
+    "difficulty": "beginner",
+    "indicators": [
+      "Domaine officiel doctolib.fr",
+      "Informations factuelles précises (nom du médecin, adresse, heure)",
+      "Aucun lien sensible : action via le compte habituel",
+      "Aucune demande d'identifiants ou de paiement",
+      "Cohérent avec un service utilisé"
+    ],
+    "explanation": "Notification de service classique. Doctolib envoie ces rappels automatiquement pour les rendez-vous pris depuis la plateforme. Pas de marqueur de phishing."
+  },
+  {
+    "id": "b-004",
+    "from": {
+      "name": "Microsoft Security",
+      "email": "noreply@micr0soft-security-team.com"
+    },
+    "subject": "Action requise : votre mot de passe expire aujourd'hui",
+    "date": "2026-05-22T06:11:00Z",
+    "body": "Cher utilisateur,\n\nNotre système a détecté que votre mot de passe Microsoft 365 expire aujourd'hui. Pour continuer à accéder à votre messagerie sans interruption, veuillez le mettre à jour immédiatement.\n\nMettre à jour mon mot de passe :\nhttp://micr0soft-security-team.com/reset?user=victim\n\nSi vous ne mettez pas votre mot de passe à jour, votre compte sera désactivé d'ici la fin de la journée.\n\nMicrosoft Security Team",
+    "isPhishing": true,
+    "difficulty": "beginner",
+    "indicators": [
+      "Domaine usurpé avec un zéro à la place du O : micr0soft (au lieu de microsoft)",
+      "Formule générique « Cher utilisateur »",
+      "Urgence (expiration aujourd'hui, désactivation)",
+      "Lien en HTTP non sécurisé",
+      "Paramètre URL ridicule (?user=victim)"
+    ],
+    "explanation": "Le typosquatting avec un chiffre à la place d'une lettre (0 pour O, 1 pour l) est une signature de phishing. Microsoft ne désactive pas un compte en quelques heures et ne communique jamais par un lien HTTP brut."
+  },
+  {
+    "id": "l-004",
+    "from": {
+      "name": "Marie Dupont",
+      "email": "marie.dupont84@gmail.com"
+    },
+    "subject": "Photos du week-end à Annecy",
+    "date": "2026-05-18T20:47:00Z",
+    "body": "Salut Lorenzo !\n\nJ'espère que tu vas bien. Je t'envoie enfin les photos qu'on a prises samedi au lac. Il y en a une où tu rates ton plongeon, je l'ai mise en pièce jointe spécialement pour toi 😄\n\nOn remet ça quand tu veux. Dis-moi si tu es libre le week-end du 7 juin, on parlait avec Thomas d'aller à Chamonix.\n\nBisous,\nMarie",
+    "isPhishing": false,
+    "difficulty": "beginner",
+    "indicators": [
+      "Expéditeur connu (un ami)",
+      "Contexte personnel et détails spécifiques (Annecy, plongeon, Thomas)",
+      "Ton naturel de conversation",
+      "Aucun lien, aucune demande d'argent ou d'identifiants",
+      "Adresse email cohérente avec un usage personnel"
+    ],
+    "explanation": "Email personnel d'un contact connu. Aucun marqueur technique de phishing. Attention cependant : un compte ami peut être piraté — méfiez-vous si le ton ou la demande devient soudainement étrange (demande d'argent en urgence, lien inhabituel)."
+  },
+  {
+    "id": "b-005",
+    "from": {
+      "name": "PayPal Service",
+      "email": "service@paypa1-secure.com"
+    },
+    "subject": "Activité suspecte détectée sur votre compte PayPal",
+    "date": "2026-05-16T22:33:00Z",
+    "body": "Bonjour,\n\nNous avons remarqué une connexion inhabituelle à votre compte PayPal depuis un appareil situé à Moscou, Russie.\n\nSi ce n'était pas vous, votre compte a peut-etre été compromis. Veuillez confirmer votre identité immédiatement en cliquant sur le lien ci-dessous :\n\nhttp://paypa1-secure.com/verify-account\n\nSi nous ne recevons pas votre confirmation sous 12 heures, votre compte sera limité.\n\nDépartement Sécurité PayPal",
+    "isPhishing": true,
+    "difficulty": "beginner",
+    "indicators": [
+      "Domaine paypa1-secure.com avec un « 1 » à la place du « l »",
+      "Effet de peur (connexion suspecte depuis l'étranger)",
+      "Délai court (12 heures)",
+      "Faute : « peut-etre » sans accent",
+      "Demande de cliquer sur un lien pour « confirmer » son compte"
+    ],
+    "explanation": "Schéma classique de phishing PayPal. Le vrai service vous demande toujours de vous connecter directement sur paypal.com (jamais via un lien email) pour vérifier les activités suspectes. Le « 1 » à la place du « l » est un piège visuel courant."
+  },
+  {
+    "id": "l-005",
+    "from": {
+      "name": "GitHub",
+      "email": "noreply@github.com"
+    },
+    "subject": "[lorenzogines/phishing-quest] Pull request #12 merged",
+    "date": "2026-05-22T10:18:00Z",
+    "body": "@lorenzogines merged pull request #12 into main.\n\nfeat: add beginner level emails dataset\n\n5 files changed, 234 insertions(+), 0 deletions(-)\n\nView it on GitHub:\nhttps://github.com/lorenzogines/phishing-quest/pull/12\n\n—\nYou are receiving this because you are subscribed to this thread.\nReply to this email directly, view it on GitHub, or unsubscribe.",
+    "isPhishing": false,
+    "difficulty": "beginner",
+    "indicators": [
+      "Domaine officiel github.com",
+      "Format technique habituel de GitHub (auteur, PR, stats)",
+      "Lien vers github.com (vérifiable en HTTPS sur le vrai domaine)",
+      "Mention claire de l'abonnement (pied de page transparent)",
+      "Aucune demande d'identifiants ou d'action urgente"
+    ],
+    "explanation": "Notification GitHub automatique standard. Tout est cohérent : domaine, format, contenu technique. Ce type d'email est généré quand on est abonné aux notifications d'un dépôt."
+  },
+  {
+    "id": "b-006",
+    "from": {
+      "name": "LinkedIn",
+      "email": "messages-notification@linked-in-notify.com"
+    },
+    "subject": "Marc Dupont vous a envoyé un message - Voir maintenant",
+    "date": "2026-06-12T09:24:00Z",
+    "body": "Bonjour,\n\nVous avez reçu un nouveau message de la part de Marc Dupont, Directeur Recrutement chez Tech Solutions.\n\n« Bonjour, j'ai vu votre profil et j'aimerais discuter d'une opportunité chez nous. Cliquez ici pour lire le message complet et répondre. »\n\nLire le message : http://linked-in-notify.com/messages/inbox\n\nCe message expirera dans 48 heures.\n\nL'équipe LinkedIn",
+    "isPhishing": true,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Nom d'affichage « LinkedIn » mais domaine linked-in-notify.com (vrai : linkedin.com)",
+      "Tiret ajouté dans le nom de domaine pour ressembler à la marque",
+      "Lien externe pour « lire le message » au lieu d'ouvrir l'app",
+      "Pression artificielle (48h d'expiration)",
+      "Message attractif pour pousser au clic (opportunité pro)"
+    ],
+    "explanation": "Spoofing de nom d'affichage classique : le nom visible imite la marque, mais l'adresse réelle révèle le faux domaine. LinkedIn n'utilise jamais de tirets dans son nom de domaine et propose toujours d'ouvrir le message directement dans l'application."
+  },
+  {
+    "id": "l-006",
+    "from": {
+      "name": "LinkedIn",
+      "email": "invitations@linkedin.com"
+    },
+    "subject": "Sophie Martin souhaite se connecter sur LinkedIn",
+    "date": "2026-06-10T14:08:00Z",
+    "body": "Bonjour Lorenzo,\n\nSophie Martin, Product Designer chez Spendesk, souhaite ajouter à son réseau professionnel sur LinkedIn :\n\n« Bonjour Lorenzo, nous nous sommes croisés à la conférence React Paris la semaine dernière, j'ai trouvé ton talk très intéressant. À bientôt ! »\n\nVous pouvez accepter ou décliner cette invitation depuis votre compte LinkedIn.\n\nL'équipe LinkedIn",
+    "isPhishing": false,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Domaine officiel linkedin.com",
+      "Message personnalisé avec contexte vérifiable (conférence)",
+      "Pas de lien direct pour répondre : action à faire depuis l'app/le site",
+      "Aucune urgence, aucune demande sensible",
+      "Format habituel des invitations LinkedIn"
+    ],
+    "explanation": "Notification LinkedIn standard. Le domaine est correct et l'action requise (accepter/décliner) doit se faire depuis le compte, pas via un lien email. Un message personnel cohérent renforce la légitimité."
+  },
+  {
+    "id": "b-007",
+    "from": {
+      "name": "Netflix",
+      "email": "billing-update@netflix.security-update.com"
+    },
+    "subject": "Votre paiement n'a pas pu être traité - Action requise",
+    "date": "2026-06-14T03:47:00Z",
+    "body": "Cher membre Netflix,\n\nNous n'avons pas pu valider votre dernier paiement. Pour éviter l'interruption de votre service, merci de mettre à jour vos informations de paiement immédiatement.\n\nMettre à jour les informations de paiement :\nhttp://netflix.security-update.com/account/payment\n\nSi nous ne recevons pas de mise à jour sous 24 heures, votre abonnement sera suspendu.\n\nCordialement,\nL'équipe Netflix",
+    "isPhishing": true,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Sous-domaine trompeur : netflix.security-update.com (le domaine racine est security-update.com, pas netflix.com)",
+      "Email envoyé à 3h47 du matin (heure inhabituelle pour un service automatisé légitime)",
+      "Formule générique « Cher membre Netflix »",
+      "Urgence 24h",
+      "Demande de mettre à jour le paiement via un lien"
+    ],
+    "explanation": "Astuce du sous-domaine : la marque apparaît à gauche du point, mais le vrai domaine est ce qui précède le TLD (.com). Ici, security-update.com appartient à l'attaquant, qui a juste préfixé « netflix. » devant. Netflix ne demande jamais de saisir un moyen de paiement via un lien email."
+  },
+  {
+    "id": "l-007",
+    "from": {
+      "name": "Netflix",
+      "email": "info@account.netflix.com"
+    },
+    "subject": "Votre reçu Netflix pour mai 2026",
+    "date": "2026-06-01T08:00:00Z",
+    "body": "Bonjour Lorenzo,\n\nVoici le récapitulatif de votre abonnement Netflix :\n\nPériode : 01/05/2026 - 31/05/2026\nFormule : Standard avec pub - 7,99 €\nMode de paiement : Visa se terminant par 4218\n\nConsultez vos reçus à tout moment depuis la rubrique « Compte » sur netflix.com.\n\nMerci d'utiliser Netflix.",
+    "isPhishing": false,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Sous-domaine légitime account.netflix.com (le domaine racine est bien netflix.com)",
+      "Reçu factuel avec détails vérifiables (carte tronquée, formule, dates)",
+      "Renvoi vers le compte pour les détails, pas de lien d'action",
+      "Aucune urgence, aucune demande d'information",
+      "Format habituel des reçus Netflix"
+    ],
+    "explanation": "Reçu mensuel légitime. account.netflix.com est un vrai sous-domaine de netflix.com (la marque est à droite du point précédant le TLD). Bon réflexe à retenir : lire le domaine racine de droite à gauche."
+  },
+  {
+    "id": "b-008",
+    "from": {
+      "name": "Bertrand Lavigne | Service RH",
+      "email": "bertrand.lavigne@rh-entreprise-portal.com"
+    },
+    "subject": "Mise à jour de votre RIB pour la paie de juin",
+    "date": "2026-06-18T11:32:00Z",
+    "body": "Bonjour,\n\nDans le cadre de la migration de notre logiciel de paie, nous devons mettre à jour les coordonnées bancaires de l'ensemble des collaborateurs avant le 25 juin pour garantir le bon versement des salaires.\n\nMerci de bien vouloir saisir votre nouveau RIB via le portail RH :\nhttp://rh-entreprise-portal.com/maj-rib\n\nEn cas de retard, le versement de votre salaire de juin pourrait être différé.\n\nCordialement,\nBertrand Lavigne\nResponsable Paie",
+    "isPhishing": true,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Domaine externe rh-entreprise-portal.com (un vrai service RH utilise le domaine de l'entreprise)",
+      "Demande de saisir un RIB via un lien email (jamais une pratique RH légitime)",
+      "Personnalisation crédible : nom d'un vrai collègue + intitulé de poste",
+      "Pression sur le salaire (peur de retard de versement)",
+      "Le scénario « migration de logiciel » est un prétexte de phishing classique"
+    ],
+    "explanation": "Spoofing d'identité interne : le nom semble familier mais le domaine n'est pas celui de l'entreprise. Un service RH ne demande jamais de saisir un RIB via un email externe. Si tu reçois ce type de message, vérifie en face à face ou par téléphone avant toute action."
+  },
+  {
+    "id": "l-008",
+    "from": {
+      "name": "SNCF Connect",
+      "email": "noreply@sncf-connect.com"
+    },
+    "subject": "Confirmation de votre voyage Paris → Marseille - 28 juin",
+    "date": "2026-06-15T19:14:00Z",
+    "body": "Bonjour Lorenzo,\n\nVotre réservation est confirmée.\n\nDimanche 28 juin 2026\nParis Gare de Lyon 09:11 → Marseille Saint-Charles 12:18\nTGV INOUI 6131 - Voiture 14 - Place 86 fenêtre\n\nVotre billet est disponible dans l'application SNCF Connect, rubrique « Mes billets ».\n\nBon voyage !",
+    "isPhishing": false,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Domaine officiel sncf-connect.com",
+      "Détails de voyage précis et factuels",
+      "Renvoi vers l'application pour récupérer le billet (pas de lien externe)",
+      "Aucune demande d'identifiants ou de paiement",
+      "Cohérent avec un voyage réservé"
+    ],
+    "explanation": "Confirmation transactionnelle classique. Tous les détails sont vérifiables et l'action (récupérer le billet) passe par l'app, pas par un lien email. Le domaine sncf-connect.com est bien le service grand public officiel de la SNCF."
+  },
+  {
+    "id": "b-009",
+    "from": {
+      "name": "SFR",
+      "email": "facturation-sfr@sfr-paiement-securise.fr"
+    },
+    "subject": "Facture impayée - Suspension de votre ligne sous 72h",
+    "date": "2026-06-16T14:45:00Z",
+    "body": "Bonjour,\n\nVotre facture SFR du mois de mai (réf. F-2026-05-887421) n'a pas pu être prélevée.\n\nMontant dû : 38,99 €\n\nPour éviter la suspension de votre ligne mobile et de votre box internet, merci de régulariser votre situation dans les 72 heures via notre espace de paiement sécurisé :\n\nhttp://sfr-paiement-securise.fr/regulariser/F-2026-05-887421\n\nService Recouvrement SFR",
+    "isPhishing": true,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Domaine sfr-paiement-securise.fr (vrai domaine SFR : sfr.fr)",
+      "Le mot « securise » dans un domaine est très souvent un signal de phishing",
+      "Référence de facture inventée mais réaliste",
+      "Menace de coupure dans 72h",
+      "Lien direct vers une page de paiement externe"
+    ],
+    "explanation": "L'opérateur historique utilise son propre domaine racine (sfr.fr). Un FAI gère toujours les régularisations depuis l'espace client, pas via un lien email pointant vers un domaine externe. Le mot « securise » dans le nom de domaine est paradoxalement un drapeau rouge."
+  },
+  {
+    "id": "l-009",
+    "from": {
+      "name": "ENGIE",
+      "email": "noreply@engie.fr"
+    },
+    "subject": "Votre facture du mois de juin est disponible",
+    "date": "2026-06-20T07:00:00Z",
+    "body": "Bonjour Lorenzo,\n\nVotre facture du mois de juin 2026 est désormais disponible dans votre espace client.\n\nMontant : 67,42 €\nPrélèvement prévu le 5 juillet 2026 sur votre compte habituel.\n\nVous pouvez consulter et télécharger votre facture depuis votre espace client sur engie.fr ou l'application Mon ENGIE.\n\nCordialement,\nL'équipe ENGIE",
+    "isPhishing": false,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Domaine officiel engie.fr",
+      "Indique seulement que la facture est disponible (pas d'action urgente)",
+      "Renvoi vers l'espace client / application, pas vers un lien de paiement",
+      "Prélèvement annoncé sur le compte habituel (pas de demande de RIB)",
+      "Ton informatif neutre"
+    ],
+    "explanation": "Notification de facture standard. ENGIE renvoie systématiquement vers l'espace client pour consulter ou télécharger une facture, jamais vers un lien de paiement direct dans l'email."
+  },
+  {
+    "id": "b-010",
+    "from": {
+      "name": "Apple",
+      "email": "noreply@apple-id-verifier.com"
+    },
+    "subject": "Votre Apple ID a été utilisé pour un achat de 89,99 €",
+    "date": "2026-06-19T22:11:00Z",
+    "body": "Cher client,\n\nVotre identifiant Apple a été utilisé pour effectuer l'achat suivant sur l'App Store :\n\nProduit : Genshin Impact - Pack Crystaux x6480\nMontant : 89,99 €\nAppareil : iPad Pro 12.9\nLieu : Bucarest, Roumanie\n\nSi vous n'êtes pas à l'origine de cet achat, annulez-le immédiatement :\nhttp://apple-id-verifier.com/cancel-purchase\n\nApple Support",
+    "isPhishing": true,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Domaine apple-id-verifier.com (vrai domaine Apple : apple.com)",
+      "Achat inquiétant à l'étranger pour pousser au clic immédiat",
+      "Formule générique « Cher client »",
+      "Montant crédible pour un jeu mobile populaire",
+      "Lien de « annulation » qui mène en réalité à un faux formulaire de connexion"
+    ],
+    "explanation": "Apple ne possède jamais de domaine de type « apple-quelquechose.com ». Les vrais reçus viennent de @email.apple.com et l'annulation passe par les réglages de l'appareil ou reportaproblem.apple.com (jamais via un lien email)."
+  },
+  {
+    "id": "l-010",
+    "from": {
+      "name": "Anaïs Richard",
+      "email": "arichard@datadoghq.com"
+    },
+    "subject": "Opportunité Frontend Engineer chez Datadog",
+    "date": "2026-06-11T16:35:00Z",
+    "body": "Bonjour Lorenzo,\n\nJe suis Anaïs, Talent Partner chez Datadog. Nous lançons une nouvelle équipe Frontend sur notre produit APM à Paris et votre profil m'a marquée — notamment votre app Phishing Quest, j'ai adoré le concept !\n\nSeriez-vous ouvert à un premier échange de 30 min cette semaine ou la prochaine ? Voici mon Calendly si pratique : https://calendly.com/arichard-datadog/intro\n\nSinon, n'hésitez pas à me proposer un créneau.\n\nBien à vous,\nAnaïs Richard\nTalent Partner - Datadog",
+    "isPhishing": false,
+    "difficulty": "intermediate",
+    "indicators": [
+      "Domaine datadoghq.com cohérent avec l'entreprise",
+      "Personnalisation forte : mention d'un projet réel du destinataire",
+      "Ton humain, pas de pression ni de menace",
+      "Lien Calendly légitime (outil pro reconnu)",
+      "Signature complète avec rôle et entreprise"
+    ],
+    "explanation": "Email de prospection RH classique et légitime. Tout est cohérent : domaine entreprise correct, contexte personnalisé, ton naturel, lien vers un outil professionnel répandu. Aucun marqueur de phishing."
+  },
+  {
+    "id": "b-011",
+    "from": {
+      "name": "Apple Support",
+      "email": "support@аpple.com"
+    },
+    "subject": "Confirmation de désactivation d'iCloud sous 24h",
+    "date": "2026-06-21T05:14:00Z",
+    "body": "Cher utilisateur,\n\nNous avons reçu une demande de désactivation permanente de votre compte iCloud. Si vous n'êtes pas à l'origine de cette demande, vous devez confirmer votre identité dans les 24 heures, sans quoi tous vos fichiers, photos et contacts seront définitivement supprimés.\n\nAnnuler la désactivation : https://аpple.com/icloud/verify\n\nApple Support",
+    "isPhishing": true,
+    "difficulty": "expert",
+    "indicators": [
+      "Homoglyphe cyrillique : le « а » dans « аpple.com » est U+0430 (cyrillique), pas U+0061 (latin)",
+      "Visuellement identique au vrai domaine, mais c'est en réalité un domaine totalement différent",
+      "Menace de suppression définitive de données pour pousser à l'action immédiate",
+      "Heure d'envoi inhabituelle (5h14)",
+      "Formule générique « Cher utilisateur »"
+    ],
+    "explanation": "Attaque IDN homograph : un caractère Unicode visuellement identique à une lettre latine est substitué dans le nom de domaine. Le navigateur peut afficher xn--pple-43d.com en clair ou non selon les réglages. Réflexe : copier-coller le domaine dans un éditeur pour révéler les caractères non-ASCII, ou ne jamais cliquer sur un lien d'email pour une action sensible."
+  },
+  {
+    "id": "l-011",
+    "from": {
+      "name": "Stripe",
+      "email": "receipts@stripe.com"
+    },
+    "subject": "Reçu de votre paiement Stripe - Mai 2026",
+    "date": "2026-06-02T10:21:00Z",
+    "body": "Bonjour,\n\nVoici le reçu de votre abonnement Stripe pour le mois de mai 2026.\n\nMontant : 29,00 €\nDate : 31 mai 2026\nFacturé à : Phishing Quest SAS\nMode de paiement : Visa •••• 4218\n\nVous pouvez télécharger le PDF de ce reçu depuis votre Dashboard Stripe :\nhttps://dashboard.stripe.com/receipts\n\nMerci d'utiliser Stripe.",
+    "isPhishing": false,
+    "difficulty": "expert",
+    "indicators": [
+      "Domaine officiel stripe.com (caractères latins uniquement)",
+      "Lien vers le vrai dashboard Stripe (dashboard.stripe.com)",
+      "Détails factuels et cohérents",
+      "Aucune urgence, ton purement transactionnel",
+      "Mode de paiement tronqué — bonne pratique de sécurité"
+    ],
+    "explanation": "Reçu Stripe transactionnel typique. Tout est cohérent et le domaine ne contient aucun caractère suspect. Le lien pointe vers le sous-domaine légitime dashboard.stripe.com."
+  },
+  {
+    "id": "b-012",
+    "from": {
+      "name": "Booking.com",
+      "email": "confirmation@bоoking.com"
+    },
+    "subject": "Action requise : ré-autorisez votre carte pour votre séjour à Lisbonne",
+    "date": "2026-06-22T18:02:00Z",
+    "body": "Bonjour,\n\nVotre réservation pour le Hôtel Belver Beja à Lisbonne (du 12 au 15 juillet) ne peut pas être confirmée : notre système n'a pas pu ré-autoriser votre carte de crédit.\n\nMerci de ré-autoriser votre paiement dans les 6 heures pour éviter l'annulation de la réservation :\nhttps://bоoking.com/secure/reauth\n\nBien cordialement,\nÉquipe Booking.com",
+    "isPhishing": true,
+    "difficulty": "expert",
+    "indicators": [
+      "Homoglyphe cyrillique : le « о » dans « bоoking.com » est U+043E (cyrillique)",
+      "Fenêtre très courte (6 heures) pour exploiter la peur de perdre la réservation",
+      "Le contexte (vraie réservation potentielle) rend l'email crédible",
+      "Demande de ré-autorisation de carte par email = jamais légitime",
+      "Domaine racine non vérifiable visuellement à l'œil nu"
+    ],
+    "explanation": "Booking.com est une cible fréquente : des bases de réservations sont parfois exfiltrées et permettent des phishings hyper-contextualisés. Toute demande de carte par email est suspecte par défaut — accède au site/app directement depuis ton navigateur pour vérifier."
+  },
+  {
+    "id": "l-012",
+    "from": {
+      "name": "Amazon Web Services",
+      "email": "no-reply-aws@amazon.com"
+    },
+    "subject": "[ap-southeast-1] Scheduled maintenance on EC2 instance i-0abc1234ef567",
+    "date": "2026-06-18T02:30:00Z",
+    "body": "Dear AWS Customer,\n\nWe are writing to inform you that scheduled maintenance has been planned for the following EC2 instance:\n\nInstance ID: i-0abc1234ef567\nRegion: ap-southeast-1\nMaintenance window: 2026-07-02 14:00 UTC - 16:00 UTC\n\nDuring this window, the instance will be rebooted. No action is required if you accept this maintenance window.\n\nFor more information, please log in to your AWS Health Dashboard at https://health.aws.amazon.com.\n\nSincerely,\nAmazon Web Services",
+    "isPhishing": false,
+    "difficulty": "expert",
+    "indicators": [
+      "Domaine amazon.com (officiel)",
+      "Identifiants techniques précis et plausibles (instance ID, région)",
+      "Renvoi vers health.aws.amazon.com (vrai sous-domaine)",
+      "Ton purement informatif, pas de demande sensible",
+      "Format habituel des notifications AWS techniques"
+    ],
+    "explanation": "Notification AWS standard de maintenance planifiée. Le ton, le contenu et le domaine sont cohérents. Les identifiants techniques et la mention « no action required » sont des signaux d'authenticité."
+  },
+  {
+    "id": "b-013",
+    "from": {
+      "name": "Microsoft Security",
+      "email": "security@rnicrosoft.com"
+    },
+    "subject": "Connexion inhabituelle à votre compte Microsoft depuis Manille",
+    "date": "2026-06-20T01:48:00Z",
+    "body": "Bonjour,\n\nNous avons détecté une connexion à votre compte Microsoft depuis un nouvel appareil :\n\nAppareil : Android - Chrome\nLieu : Manille, Philippines\nIP : 112.198.78.214\nHeure : 19 juin 2026, 23:38 UTC\n\nSi ce n'était pas vous, sécurisez votre compte immédiatement :\nhttps://rnicrosoft.com/account/security/review\n\nMicrosoft Account Team",
+    "isPhishing": true,
+    "difficulty": "expert",
+    "indicators": [
+      "Homoglyphe typographique : « rn » à la place de « m » dans rnicrosoft.com",
+      "À petite taille de police, « rn » et « m » sont quasi indiscernables",
+      "Format de message volontairement très proche des vraies alertes Microsoft",
+      "Détails techniques inventés mais crédibles (IP, modèle d'appareil)",
+      "Lien d'action vers le faux domaine"
+    ],
+    "explanation": "Attaque par caractères jumeaux ASCII (homoglyphes latins) : « rn » mime « m », « vv » mime « w », « cl » mime « d ». Microsoft envoie ses alertes depuis @account.microsoft.com ou @accountprotection.microsoft.com. Toujours zoomer ou copier le domaine avant de cliquer."
+  },
+  {
+    "id": "l-013",
+    "from": {
+      "name": "GitHub",
+      "email": "noreply@github.com"
+    },
+    "subject": "[lorenzogines/phishing-quest] CVE-2024-21538 (Moderate) detected in cross-spawn",
+    "date": "2026-06-17T13:22:00Z",
+    "body": "Dependabot has detected 1 vulnerability in lorenzogines/phishing-quest:\n\nCVE-2024-21538 - Moderate severity\nPackage: cross-spawn (npm)\nAffected versions: < 7.0.5\nPatched in: 7.0.5\n\nDependabot can open a pull request to fix this. View the alert and merge the fix:\nhttps://github.com/lorenzogines/phishing-quest/security/dependabot/1\n\n-\nYou are receiving this because you are watching this repository.\nReply to this email directly, view it on GitHub, or unsubscribe.",
+    "isPhishing": false,
+    "difficulty": "expert",
+    "indicators": [
+      "Domaine officiel github.com",
+      "CVE réelle et identifiable (CVE-2024-21538 cross-spawn ReDoS)",
+      "Lien vers le vrai chemin github.com/{user}/{repo}/security/dependabot/...",
+      "Pas de pression ni d'urgence, format Dependabot standard",
+      "Pied de page indiquant la raison de réception (watching)"
+    ],
+    "explanation": "Notification Dependabot authentique. Le format technique, la CVE vérifiable et l'URL bien formée sur github.com sont des signaux clairs. Dependabot envoie systématiquement ce type d'alerte aux watchers d'un dépôt avec une vulnérabilité connue."
+  },
+  {
+    "id": "b-014",
+    "from": {
+      "name": "Pierre Vasseur",
+      "email": "p.vasseur.direction@gmail.com"
+    },
+    "subject": "URGENT - Virement à effectuer ce matin - confidentiel",
+    "date": "2026-06-23T08:47:00Z",
+    "body": "Lorenzo,\n\nJe suis en réunion d'acquisition ce matin et je ne peux pas être joint par téléphone.\n\nNous devons absolument finaliser un virement de 47 850 € vers notre futur partenaire avant midi, sinon le deal tombe à l'eau.\n\nMerci de procéder dès maintenant au virement vers le compte suivant et de me confirmer par retour de mail :\n\nIBAN : FR76 3000 4028 9100 0123 4567 891\nBIC : BNPAFRPPXXX\nBénéficiaire : Meridien Consulting Ltd\n\nGarde ça strictement confidentiel le temps qu'on signe.\n\nPierre Vasseur\nPDG",
+    "isPhishing": true,
+    "difficulty": "expert",
+    "indicators": [
+      "PDG qui contacte un employé via une adresse Gmail personnelle (jamais le canal légitime)",
+      "Urgence extrême combinée à un secret demandé (anti-vérification)",
+      "Montant rond mais crédible, ciblé pour passer en-dessous des seuils de double validation",
+      "Demande de « confirmer par retour de mail » pour boucler la boucle d'autorité",
+      "Prétexte fabriqué (réunion, injoignable) pour empêcher la vérification téléphone"
+    ],
+    "explanation": "Arnaque au président (BEC : Business Email Compromise) — l'un des phishings les plus coûteux. La règle absolue : tout virement urgent demandé par un dirigeant via un canal inhabituel doit être validé en face à face ou par téléphone sur un numéro connu, jamais par retour de mail. Le secret demandé est précisément ce qui doit déclencher l'alerte."
+  },
+  {
+    "id": "l-014",
+    "from": {
+      "name": "Le Monde",
+      "email": "nl@lemonde.fr"
+    },
+    "subject": "La Matinale du mardi 23 juin",
+    "date": "2026-06-23T07:00:00Z",
+    "body": "Bonjour,\n\nVoici les sujets sélectionnés pour vous ce matin :\n\n· Élections européennes : ce que disent les sondages à J-3\n· Climat - Pourquoi la canicule de cette semaine inquiète les hydrologues\n· Tech - L'Europe finalise son cadre sur les modèles d'IA générative\n· Sport - Coupe du monde féminine : premières surprises du tableau\n\nLire la Matinale : https://www.lemonde.fr/la-matinale/\n\nBonne journée,\nLa rédaction du Monde\n\nVous recevez cet email car vous êtes abonné(e) à la newsletter La Matinale. Se désabonner.",
+    "isPhishing": false,
+    "difficulty": "expert",
+    "indicators": [
+      "Domaine officiel lemonde.fr",
+      "Lien renvoyant vers le vrai site lemonde.fr",
+      "Contenu éditorial cohérent avec un quotidien",
+      "Mention claire de l'abonnement et lien de désabonnement (RGPD)",
+      "Aucune demande d'action sensible"
+    ],
+    "explanation": "Newsletter éditoriale légitime. Tout est en place : domaine, contenu, mention RGPD. C'est précisément le genre d'email auquel on est habitué — et que les phishers tentent d'imiter. Vérifier malgré tout le domaine reste un bon réflexe."
+  },
+  {
+    "id": "b-015",
+    "from": {
+      "name": "AWS Billing",
+      "email": "aws-billing@invoices.aws-secure-billing.com"
+    },
+    "subject": "Facture AWS en retard - suspension des services sous 48h",
+    "date": "2026-06-19T16:08:00Z",
+    "body": "Dear AWS Customer,\n\nYour latest AWS invoice (INV-2026-06-7841) of $1,247.83 is past due.\n\nTo avoid suspension of all running services (EC2, RDS, S3) within 48 hours, please settle the outstanding balance now:\n\nhttps://invoices.aws-secure-billing.com/pay/INV-2026-06-7841\n\nFor any question, contact our billing team at billing@aws-secure-billing.com.\n\nAWS Billing Department",
+    "isPhishing": true,
+    "difficulty": "expert",
+    "indicators": [
+      "Domaine racine aws-secure-billing.com (vrai domaine AWS : amazon.com)",
+      "Préfixé par « invoices. » et « aws- » pour faire passer un nom totalement étranger",
+      "Mots-clés anxiogènes (« secure », « billing ») dans le nom de domaine",
+      "Montant crédible pour un compte AWS pro",
+      "Menace de suspension multi-services pour maximiser la peur"
+    ],
+    "explanation": "Variation sophistiquée du sous-domaine trompeur : ici, ce n'est pas amazon.com qui est dans le domaine racine, mais un domaine inventé. AWS envoie ses factures depuis no-reply-aws@amazon.com et toute facture peut être consultée et payée depuis la Billing Console (console.aws.amazon.com/billing). Ne jamais passer par un lien d'email pour régler une facture cloud."
+  },
+  {
+    "id": "l-015",
+    "from": {
+      "name": "Camille Bréhier",
+      "email": "c.brehier@datadoghq.com"
+    },
+    "subject": "Sync 1:1 demain à 11h ?",
+    "date": "2026-06-22T17:48:00Z",
+    "body": "Hello Lorenzo,\n\nDispo pour notre 1:1 hebdo demain mardi à 11h ? Je veux qu'on parle de :\n\n· Le roadmap Q3 du module APM Frontend\n· Tes retours sur la nouvelle stack Reanimated\n· Un point rapide sur ton onboarding mentee\n\nSi 11h ne marche pas, balance-moi 2-3 créneaux qui t'arrangent dans Slack.\n\nCamille",
+    "isPhishing": false,
+    "difficulty": "expert",
+    "indicators": [
+      "Domaine entreprise cohérent avec celui du destinataire",
+      "Ton conversationnel naturel avec contexte spécifique au poste",
+      "Sujets précis et plausibles dans le cadre d'un 1:1",
+      "Aucun lien externe, aucune demande sensible",
+      "Renvoi vers Slack pour la suite — outil interne habituel"
+    ],
+    "explanation": "Email interne managérial typique. Tout est cohérent : domaine, ton, contenu. Le piège pour ce niveau est de ne pas devenir paranoïaque face aux emails internes légitimes — la clé reste le domaine racine et la présence ou non d'une action sensible inhabituelle."
+  }
+]
